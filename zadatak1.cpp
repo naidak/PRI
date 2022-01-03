@@ -3,6 +3,7 @@
 using namespace std;
 
 /*
+V8_1 ZADATAK6
 Kreirajte strukturu učenik koja će imati sljedeća obilježja: redni broj, prezime, ime i
 prosjecna ocjena. Deklarirajte 3 objekta tipa učenik. Omogućite unos obilježja za svakog
 od učenika (pojedinačno) uz pomoć funkcije: void unos (ucenik *);
