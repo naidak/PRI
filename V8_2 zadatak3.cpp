@@ -74,6 +74,7 @@ int main()
 	int brojSandala = Sandale(o, vel);
 	cout << "Broj modela sandale je: " << brojSandala<<endl;
 	
+	delete[] o;
 
 	system("pause>0");
 	return 0;
