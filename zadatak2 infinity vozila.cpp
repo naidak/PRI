@@ -11,8 +11,16 @@ struct vozilo
     vozilo() {
         markaVozila = new char[50];
         brojSasije = new char[20];
-        tipVozila = new char[20];
+        tipVozila = new char[2]; // 2 zbog nulterminirajuceg znaka
         kubnihCM = new int;
+    }
+
+    ~vozilo() {
+        delete[] markaVozila;
+        delete[] brojSasije;
+        delete[] tipVozila;
+        delete kubnihCM;
+        markaVozila = nullptr; brojSasije = nullptr; tipVozila = nullptr; kubnihCM = nullptr;
     }
 };
 
@@ -27,8 +35,10 @@ void Unos(vozilo** v, int red, int kolona)
             cin.getline((*(v + i) + j)->markaVozila, 50);
             cout << "Unesite broj sasije: ";
             cin.getline((*(v + i) + j)->brojSasije, 20);
+            do{
             cout << "Unesite tip vozila: ";
-            cin.getline((*(v + i) + j)->tipVozila, 20);
+            cin.getline((*(v + i) + j)->tipVozila, 2);
+            } while (*(*(v + i) + j)->tipVozila != 'A' && *(*(v + i) + j)->tipVozila != 'B' && *(*(v + i) + j)->tipVozila != 'C');
             cout << "Unesite kubne cm: ";
             cin >> *(*(*(v + i) + j)).kubnihCM;
             cout << "---------------------------------------------------\n";
