@@ -40,7 +40,6 @@ int main() {
 	cin >> kolona;
 
 	vozilo** niz = new vozilo * [red];
-	float* temperature = new float[kolona];
 
 	for (int i = 0; i < red; i++)
 		*(niz + i) = new vozilo[kolona];
