@@ -34,7 +34,6 @@ int main() {
 	cin >> kolona;
 
 	fudbaler** niz = new fudbaler * [red];
-	float* temperature = new float[kolona];
 
 	for (int i = 0; i < red; i++)
 		*(niz + i) = new fudbaler[kolona];
