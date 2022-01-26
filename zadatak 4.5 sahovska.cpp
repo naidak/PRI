@@ -61,7 +61,7 @@ float AritmetickaSredina(int** niz, int red, int kolona)
 	{
 		for (int j = 0; j < kolona; j++)
 		{
-			if ((i + j )% 2 == 0 && (i+j)<=red-2)
+			if ((i + j )% 2 == 0 && j>i)
 			{
 				suma += *(*(niz + i) + j);
 				brojac++;
